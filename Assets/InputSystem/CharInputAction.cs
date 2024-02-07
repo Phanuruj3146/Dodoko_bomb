@@ -123,6 +123,17 @@ public partial class @CharInputAction: IInputActionCollection2, IDisposable
                     ""action"": ""Bomb"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b7ff9a8e-12ac-4b51-b302-690e7185d4bb"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Bomb"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }

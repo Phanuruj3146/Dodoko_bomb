@@ -9,7 +9,10 @@ public class NewBehaviourScript : MonoBehaviour
     public GameState gameState;
     public Rigidbody rigid;
     public CharInputAction actionMap;
+    public GameObject bomb;
+    public GameObject newBomb;
     [SerializeField] private Vector2 directionValue;
+    [SerializeField] private float dropBomb;
     [SerializeField] private float forcePower = 1f;
     void Start()
     {
@@ -17,12 +20,18 @@ public class NewBehaviourScript : MonoBehaviour
 
         actionMap = new CharInputAction();
         actionMap.Enable();
+        newBomb = Instantiate(bomb);
     }
 
     // Update is called once per frame
     void Update()
     {
         directionValue = actionMap.Player.Movement.ReadValue<Vector2>();
+        dropBomb = actionMap.Player.Bomb.ReadValue<float>();
+        if (dropBomb == 1)
+        {
+            Attack();
+        }
     }
 
     private void FixedUpdate()
@@ -34,5 +43,12 @@ public class NewBehaviourScript : MonoBehaviour
     {
         Vector3 applyingForce = directionValue * forcePower;
         rigid.AddForce(applyingForce, ForceMode.Impulse);
+    }
+
+    void Attack()
+    {
+        newBomb.transform.position = this.transform.position;
+        newBomb.GetComponent<Renderer>().enabled = true;
+        // newBomb.GetComponent<Rigidbody>().velocity = Vector3.zero;
     }
 }
