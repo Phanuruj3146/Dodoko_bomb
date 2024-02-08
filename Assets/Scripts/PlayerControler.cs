@@ -57,6 +57,7 @@ public class NewBehaviourScript : MonoBehaviour
     {
         newBomb.transform.position = this.transform.position;
         newBomb.GetComponent<Renderer>().enabled = true;
-        // newBomb.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        newBomb.SetActive(true);
+        newBomb.GetComponent<Rigidbody>().velocity = Vector3.zero;
     }
 }

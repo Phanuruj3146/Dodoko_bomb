@@ -20,8 +20,7 @@ public class Bomb : MonoBehaviour
     {
          if (collision.gameObject.tag == "floor")
         {
-            this.gameObject.GetComponent<Renderer>().enabled = false;
-            Debug.Log("colided");
+            this.gameObject.SetActive(false);
             Debug.Log("colided");
         }
     }
