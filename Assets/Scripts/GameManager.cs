@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     public GameObject player;
     public GameState gameState;
+    public GameObject startBtn;
     void Start()
     {
         // gameState = GameState.PreGame;
@@ -17,11 +18,17 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        // Debug.Log(gameState);
     }
     public void StartGame()
     {
         gameState = GameState.Gameplay;
-        Debug.Log(gameState);
+        Debug.Log("click");
+        startBtn.SetActive(false);
+    }
+
+    public GameState GetGameState()
+    {
+        return gameState;
     }
 }

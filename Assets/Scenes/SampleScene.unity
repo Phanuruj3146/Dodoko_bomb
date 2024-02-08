@@ -842,6 +842,7 @@ MonoBehaviour:
   rigid: {fileID: 977231573}
   bomb: {fileID: 2438091466343158497, guid: 2798b8f7d7e3e9f428a25efa40a012c0, type: 3}
   newBomb: {fileID: 0}
+  gameManager: {fileID: 1681354782}
   directionValue: {x: 0, y: 0}
   dropBomb: 0
   forcePower: 0.5
@@ -1022,8 +1023,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a672f256dfd9c94d805ff31de8013b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 977231568}
   gameState: 0
+  startBtn: {fileID: 1558926627}
 --- !u!1 &1887299624
 GameObject:
   m_ObjectHideFlags: 0

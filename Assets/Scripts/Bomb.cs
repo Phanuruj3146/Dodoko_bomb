@@ -22,6 +22,7 @@ public class Bomb : MonoBehaviour
         {
             this.gameObject.GetComponent<Renderer>().enabled = false;
             Debug.Log("colided");
+            Debug.Log("colided");
         }
     }
 }

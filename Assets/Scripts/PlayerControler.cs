@@ -11,6 +11,7 @@ public class NewBehaviourScript : MonoBehaviour
     public CharInputAction actionMap;
     public GameObject bomb;
     public GameObject newBomb;
+    public GameObject gameManager;
     [SerializeField] private Vector2 directionValue;
     [SerializeField] private float dropBomb;
     [SerializeField] private float forcePower = 1f;
@@ -26,10 +27,12 @@ public class NewBehaviourScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(gameState);
+        // Debug.Log(gameState);
+        // GameState manager = gameManager.GetComponent<GameManager>().GetGameState();
+        gameState = gameManager.GetComponent<GameManager>().gameState;
         if (gameState == GameState.Gameplay)
         {
-            Debug.Log("can control");
+            //Debug.Log("yayy");
             directionValue = actionMap.Player.Movement.ReadValue<Vector2>();
             dropBomb = actionMap.Player.Bomb.ReadValue<float>();
             if (dropBomb == 1)
